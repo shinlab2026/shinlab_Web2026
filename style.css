@@ -86,7 +86,7 @@ a {
 /* Hero */
 
 .hero {
-  min-height: calc(100vh - 72px);
+  min-height: calc(100vh - 32px);
   display: flex;
   align-items: center;
   padding: 80px 0;
