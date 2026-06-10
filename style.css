@@ -713,107 +713,78 @@ a {
 .meaning-prefix {
   position: relative;
   display: inline-block;
-  width: 13ch;
+  min-width: 9.5ch;
   color: var(--green);
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid var(--green);
-  animation:
-    typingMeaning 18s steps(14, end) infinite,
-    blinkCursor 0.8s step-end infinite;
 }
 
 .meaning-prefix::before {
   content: "Personal";
-  animation: wordMeaning 18s infinite;
+  animation: changeMeaning 14s infinite;
+}
+
+.meaning-prefix::after {
+  content: "";
+  position: absolute;
+  right: -4px;
+  top: 8%;
+  width: 3px;
+  height: 90%;
+  background: var(--green);
+  animation: cursorBlink 0.8s infinite;
 }
 
 .meaning-fixed {
   color: var(--green-dark);
 }
 
-@keyframes wordMeaning {
-  0%, 16% {
+@keyframes changeMeaning {
+  0%, 10% {
     content: "Personal";
   }
 
-  17%, 32% {
+  12%, 20% {
+    content: "";
+  }
+
+  22%, 32% {
     content: "Social";
   }
 
-  33%, 48% {
+  34%, 42% {
+    content: "";
+  }
+
+  44%, 54% {
     content: "AI-mediated";
   }
 
-  49%, 64% {
+  56%, 64% {
+    content: "";
+  }
+
+  66%, 76% {
     content: "Collaborative";
   }
 
-  65%, 80% {
+  78%, 84% {
+    content: "";
+  }
+
+  86%, 94% {
     content: "Contextual";
   }
 
-  81%, 100% {
+  96%, 100% {
     content: "Future-oriented";
   }
 }
 
-@keyframes typingMeaning {
-  0%, 4% {
-    width: 0;
+@keyframes cursorBlink {
+  0%, 45% {
+    opacity: 1;
   }
 
-  8%, 14% {
-    width: 9ch;
-  }
-
-  16%, 18% {
-    width: 0;
-  }
-
-  20%, 30% {
-    width: 7ch;
-  }
-
-  32%, 34% {
-    width: 0;
-  }
-
-  36%, 46% {
-    width: 12ch;
-  }
-
-  48%, 50% {
-    width: 0;
-  }
-
-  52%, 62% {
-    width: 13ch;
-  }
-
-  64%, 66% {
-    width: 0;
-  }
-
-  68%, 78% {
-    width: 10ch;
-  }
-
-  80%, 82% {
-    width: 0;
-  }
-
-  84%, 96% {
-    width: 15ch;
-  }
-
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes blinkCursor {
-  50% {
-    border-color: transparent;
+  46%, 100% {
+    opacity: 0;
   }
 }
