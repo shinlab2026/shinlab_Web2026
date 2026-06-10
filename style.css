@@ -713,78 +713,169 @@ a {
 .meaning-prefix {
   position: relative;
   display: inline-block;
-  min-width: 9.5ch;
+  width: 13ch;
   color: var(--green);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--green);
+  animation:
+    typingMeaning 18s steps(14, end) infinite,
+    blinkCursor 0.8s step-end infinite;
 }
 
 .meaning-prefix::before {
   content: "Personal";
-  animation: changeMeaning 14s infinite;
-}
-
-.meaning-prefix::after {
-  content: "";
-  position: absolute;
-  right: -4px;
-  top: 8%;
-  width: 3px;
-  height: 90%;
-  background: var(--green);
-  animation: cursorBlink 0.8s infinite;
+  animation: wordMeaning 18s infinite;
 }
 
 .meaning-fixed {
   color: var(--green-dark);
 }
 
-@keyframes changeMeaning {
-  0%, 10% {
+.meaning-prefix {
+  position: relative;
+  display: inline-block;
+  width: 16ch;
+  color: var(--green);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--green);
+  animation:
+    typingMeaning 30s steps(16, end) infinite,
+    blinkCursor 0.8s step-end infinite;
+}
+
+.meaning-prefix::before {
+  content: "Personal";
+  animation: wordMeaning 30s infinite;
+}
+
+@keyframes wordMeaning {
+  0%, 16.6% {
     content: "Personal";
   }
 
-  12%, 20% {
-    content: "";
-  }
-
-  22%, 32% {
+  16.7%, 33.2% {
     content: "Social";
   }
 
-  34%, 42% {
-    content: "";
-  }
-
-  44%, 54% {
+  33.3%, 49.8% {
     content: "AI-mediated";
   }
 
-  56%, 64% {
-    content: "";
-  }
-
-  66%, 76% {
+  49.9%, 66.4% {
     content: "Collaborative";
   }
 
-  78%, 84% {
-    content: "";
-  }
-
-  86%, 94% {
+  66.5%, 83% {
     content: "Contextual";
   }
 
-  96%, 100% {
+  83.1%, 100% {
     content: "Future-oriented";
   }
 }
 
-@keyframes cursorBlink {
-  0%, 45% {
-    opacity: 1;
+@keyframes typingMeaning {
+  /* Personal */
+  0% {
+    width: 0;
   }
 
-  46%, 100% {
-    opacity: 0;
+  3% {
+    width: 8ch;
+  }
+
+  12% {
+    width: 8ch;
+  }
+
+  16.6% {
+    width: 0;
+  }
+
+  /* Social */
+  16.7% {
+    width: 0;
+  }
+
+  19.7% {
+    width: 6ch;
+  }
+
+  28.7% {
+    width: 6ch;
+  }
+
+  33.2% {
+    width: 0;
+  }
+
+  /* AI-mediated */
+  33.3% {
+    width: 0;
+  }
+
+  36.8% {
+    width: 11ch;
+  }
+
+  45.8% {
+    width: 11ch;
+  }
+
+  49.8% {
+    width: 0;
+  }
+
+  /* Collaborative */
+  49.9% {
+    width: 0;
+  }
+
+  53.4% {
+    width: 13ch;
+  }
+
+  62.4% {
+    width: 13ch;
+  }
+
+  66.4% {
+    width: 0;
+  }
+
+  /* Contextual */
+  66.5% {
+    width: 0;
+  }
+
+  70% {
+    width: 10ch;
+  }
+
+  79% {
+    width: 10ch;
+  }
+
+  83% {
+    width: 0;
+  }
+
+  /* Future-oriented */
+  83.1% {
+    width: 0;
+  }
+
+  87% {
+    width: 15ch;
+  }
+
+  96% {
+    width: 15ch;
+  }
+
+  100% {
+    width: 0;
   }
 }
