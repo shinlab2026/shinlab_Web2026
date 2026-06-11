@@ -701,7 +701,7 @@ a {
   margin-top: 34px;
   display: flex;
   align-items: baseline;
-  gap: 4px;
+  gap: 1px;
   font-size: clamp(34px, 5vw, 64px);
   line-height: 1;
   font-weight: 900;
@@ -712,7 +712,7 @@ a {
 .meaning-word {
   position: relative;
   display: inline-block;
-  width: 13ch;
+  width: 10ch;
   color: var(--green);
   white-space: nowrap;
   overflow: hidden;
@@ -766,11 +766,11 @@ a {
   }
 
   4% {
-    width: 8ch;
+    width: 6ch;
   }
 
   12% {
-    width: 8ch;
+    width: 6ch;
   }
 
   16.66% {
@@ -783,11 +783,11 @@ a {
   }
 
   20.67% {
-    width: 6ch;
+    width: 5ch;
   }
 
   28.67% {
-    width: 6ch;
+    width: 5ch;
   }
 
   33.32% {
@@ -800,11 +800,11 @@ a {
   }
 
   37.33% {
-    width: 11ch;
+    width: 10ch;
   }
 
   45.33% {
-    width: 11ch;
+    width: 10ch;
   }
 
   49.98% {
@@ -817,11 +817,11 @@ a {
   }
 
   53.99% {
-    width: 13ch;
+    width: 10ch;
   }
 
   61.99% {
-    width: 13ch;
+    width: 10ch;
   }
 
   66.64% {
@@ -834,11 +834,11 @@ a {
   }
 
   70.65% {
-    width: 10ch;
+    width: 8ch;
   }
 
   78.65% {
-    width: 10ch;
+    width: 8ch;
   }
 
   83.3% {
@@ -851,11 +851,11 @@ a {
   }
 
   87.31% {
-    width: 7ch;
+    width: 5ch;
   }
 
   95.31% {
-    width: 7ch;
+    width: 5ch;
   }
 
   100% {
