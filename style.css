@@ -701,7 +701,7 @@ a {
   margin-top: 34px;
   display: flex;
   align-items: baseline;
-  gap: 10px;
+  gap: 4px;
   font-size: clamp(34px, 5vw, 64px);
   line-height: 1;
   font-weight: 900;
@@ -712,7 +712,7 @@ a {
 .meaning-word {
   position: relative;
   display: inline-block;
-  width: 16ch;
+  width: 13ch;
   color: var(--green);
   white-space: nowrap;
   overflow: hidden;
@@ -755,7 +755,7 @@ a {
   }
 
   83.31%, 100% {
-    content: "Future-oriented";
+    content: "Future";
   }
 }
 
@@ -845,17 +845,17 @@ a {
     width: 0;
   }
 
-  /* Future-oriented */
+  /* Future */
   83.31% {
     width: 0;
   }
 
   87.31% {
-    width: 15ch;
+    width: 7ch;
   }
 
   95.31% {
-    width: 15ch;
+    width: 7ch;
   }
 
   100% {
